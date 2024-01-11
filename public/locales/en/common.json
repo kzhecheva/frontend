@@ -18,6 +18,10 @@
       "news": "News",
       "faq": "Frequently asked questions"
     },
+    "donations": {
+      "donate-campaign": "Donate dor campaign",
+      "donate-category": "Donate for category"
+    },
     "admin": {
       "index": "Administration",
       "info-requests": "Contact requests",

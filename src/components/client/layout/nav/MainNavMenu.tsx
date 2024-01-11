@@ -1,13 +1,10 @@
 import React from 'react'
-import { Grid, Typography } from '@mui/material'
+import { Grid } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 
-import { routes } from 'common/routes'
-import theme from 'common/theme'
-
+import DonationDropdown from './DonationDropdown'
 import DonationMenu from './DonationMenu'
 import ProjectMenu from './ProjectMenu'
-import LinkButton from 'components/common/LinkButton'
 
 export default function MainNavMenu({ children }: { children?: React.ReactNode }) {
   const { t } = useTranslation()
@@ -15,16 +12,7 @@ export default function MainNavMenu({ children }: { children?: React.ReactNode }
   return (
     <Grid container direction="row" wrap="nowrap" alignItems="baseline" spacing={4}>
       <Grid item>
-        <LinkButton
-          variant="outlined"
-          size="large"
-          color="inherit"
-          sx={{ borderColor: theme.palette.primary.main }}
-          href={routes.campaigns.index}>
-          <Typography variant="button" color="#000000DE">
-            {t('nav.donate')}
-          </Typography>
-        </LinkButton>
+        <DonationDropdown />
       </Grid>
       <Grid item>
         <DonationMenu />
